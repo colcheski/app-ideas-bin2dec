@@ -24,6 +24,7 @@
 
 .invalid {
   border-color: red;
+  color: red;
 }
 
 .invalid:focus {
@@ -33,7 +34,6 @@
 
 #errorMsg {
   margin-top: 5px;
-  color: red;
 }
 
 .hidden {
