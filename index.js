@@ -1,14 +1,26 @@
 const button = document.getElementById('checkBtn');
 const input = document.getElementById('binaryInput');
 const label = document.getElementById('decimalLabel');
+const errorMsg = document.getElementById('errorMsg');
 
 function checkInputValidity() {
   return /^[01]+$/.test(input.value);
 };
 
+function handleInvalidInput(inputValid) {
+  button.disabled = !inputValid || input.value.trim() === '';
+  if (!inputValid) {
+    input.classList.add('invalid');
+    errorMsg.classList.remove('hidden');
+  } else {
+    input.classList.remove('invalid');
+    errorMsg.classList.add('hidden');
+  }
+};
+
 function handleInputChange() {
   input.addEventListener('input', () => {
-    button.disabled = !checkInputValidity(input.value);
+    handleInvalidInput(checkInputValidity(input.value));
   });
 };
 

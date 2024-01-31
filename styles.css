@@ -21,3 +21,21 @@
   font-size: 30px;
   margin-bottom: 10px;
 }
+
+.invalid {
+  border-color: red;
+}
+
+.invalid:focus {
+  border-color: red;
+  outline: none; /* Optional: Remove the default focus outline */
+}
+
+#errorMsg {
+  margin-top: 5px;
+  color: red;
+}
+
+.hidden {
+  display: none;
+}
