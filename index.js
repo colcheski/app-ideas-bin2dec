@@ -41,8 +41,17 @@ function handleButtonPress() {
   });
 }
 
+function handleEnterPress() {
+  document.addEventListener('keypress', (event) => {
+    if (event.keyCode === 13) {
+      button.click();
+    }
+  })
+}
+
 handleInputChange();
 handleButtonPress();
+handleEnterPress();
 
 
 
